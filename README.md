@@ -1,0 +1,49 @@
+# my first curiousity
+
+The `use std::io;` statement in Rust is used to bring the `io` (input/output) library into scope. The `io` library is part of Rust's standard library, known as `std`. 
+
+Here's a breakdown:
+
+- `use`: This is a keyword in Rust that allows you to bring certain parts of the scope into your current scope. This is useful because it allows you to use shorter names for items that are used frequently.
+
+- `std::io`: This is the path to the `io` library in the standard library (`std`). The `::` syntax is used to navigate through modules and libraries. The `io` library provides a number of useful features for handling input and output operations.
+
+So, when you write `use std::io;`, you're telling Rust that you want to use the `io` library from the standard library in your code. This gives you access to a number of functionalities such as reading input from the user and printing output to the console.
+
+
+In Rust, the `use` keyword is used to bring certain parts of the scope into your current scope. This is a way to manage the visibility of different parts of your code.
+
+Let's consider an example. Suppose you have a module named `fruits` and inside this module, you have a function named `apple`. Normally, to call this function, you would need to specify the full path like so: `fruits::apple()`. 
+
+# use ->
+
+However, if you use the `use` keyword to bring `apple` into scope: `use fruits::apple;`, you can then call the function directly with `apple()`.
+
+This is particularly useful when you're working with deeply nested modules or if you want to avoid typing long module paths. It helps to keep your code clean and easy to read.
+
+It's important to note that you should be careful when using the `use` keyword to avoid naming conflicts. For instance, if you have two functions with the same name in different modules, using both in the same scope would result in a naming conflict.
+
+# String::new() a function that returns a new instance of a String
+
+# io::stdin():
+ This is like asking your program to open its ears and get ready to listen for something you’re going to tell it1. In technical terms, it returns a handle to the standard input stream of your program.
+
+ # .read_line(&mut guess):
+  This is like telling your program to listen to what you’re saying until you’re done (which is when you hit Enter), and then store what you said in its memory1. In technical terms, it reads a line of input from the user, and appends it to the string guess1. The &mut guess part is a mutable reference to guess, which means read_line is allowed to modify guess.
+  So, when you put it all together, io::stdin().read_line(&mut guess) is like saying "Program, open your ears, listen to what I’m going to say until I’m done, and remember what I said.
+
+
+# RAND
+Imagine you’re playing a game where you have to guess a secret number. The computer picks a random number between 1 and 100, and you have to guess what it is.
+
+In the code let secret_number = rand::thread_rng().gen_range(1..=100);, the computer is picking its secret number.
+
+Here’s how it works:
+
+rand::thread_rng(): This is like the computer shaking a magic 8-ball that only it can see.
+
+.gen_range(1..=100): This is the computer asking the 8-ball for a secret number between 1 and 100.
+
+let secret_number = ...: This is the computer whispering the secret number to itself, so it doesn’t forget.
+
+The use rand::Rng line at the top is like the computer reading the instructions on the 8-ball box. It needs to do this to know how to shake the 8-ball and ask for a secret number.
